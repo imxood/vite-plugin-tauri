@@ -1,13 +1,6 @@
-import type { Plugin } from "vite";
 
-export function tauriPlugin(): Plugin {
-	return {
-		name: "vite-plugin-tauri",
-		transform(src, id) {
-			console.log("transform runned");
-            return src;
-		},
-	};
+export function greet() {
+    const hello: string = 'hello, world';
+    console.log(hello);
 }
-
-export default tauriPlugin;
+export default greet;

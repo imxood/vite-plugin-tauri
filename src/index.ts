@@ -1,13 +1,13 @@
 import type { Plugin } from "vite";
 
-export function tauriPlugin(): Plugin {
+export default function tauriPlugin() {
+
 	return {
-		name: "vite-plugin-tauri",
-		transform(src, id) {
-			console.log("transform runned");
-            return src;
+		name: 'vite-plugin-tauri',
+		enforce: 'pre',
+
+		configureServer() {
+			console.log("configureServer");
 		},
 	};
 }
-
-export default tauriPlugin;
